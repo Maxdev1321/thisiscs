@@ -22,9 +22,9 @@ namespace FormSize
             int oldWidth = form.Width;
             int oldHeight = form.Height;
 
-            if(e.Button == MouseButtons.Left)
+            if (e.Button == MouseButtons.Left)
             {
-                if(oldWidth<oldHeight)
+                if (oldWidth < oldHeight)
                 {
                     form.Width = oldHeight;
                     form.Height = oldWidth;
@@ -32,15 +32,15 @@ namespace FormSize
             }
             else if (e.Button == MouseButtons.Right)
             {
-                if(oldHeight<oldWidth)
+                if (oldHeight < oldWidth)
                 {
                     form.Width = oldHeight;
                     form.Height = oldWidth;
                 }
-
-                Console.WriteLine("윈도우의 크기가 변경되었습니다.");
-                Console.WriteLine($"Width: {form.Width},Height:{form.Height}");
             }
+            Console.WriteLine("윈도우의 크기가 변경되었습니다.");
+            Console.WriteLine($"Width: {form.Width},Height:{form.Height}");
+            
         }
     }
 }
